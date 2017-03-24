@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup ,ReactiveFormsModule} from '@angular/forms';
+import { data } from "../data";
 
 @Component({
   selector: 'app-questionnaire',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./questionnaire.component.css']
 })
 export class QuestionnaireComponent implements OnInit {
+  QForm : FormGroup;
+  questionData = data;
+  constructor(fb : FormBuilder) {
+    this.QForm = fb.group({
 
-  constructor() { }
+    })
+  }
 
   ngOnInit() {
+  }
+
+  submitForm(value:any):void{
+    console.log(value);
   }
 
 }
