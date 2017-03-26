@@ -7,7 +7,6 @@ import {BarchartComponent} from "../barchart/barchart.component";
     selector: 'app-questionnaire',
     templateUrl: './questionnaire.component.html',
     styleUrls: ['./questionnaire.component.css'],
-    providers : [BarchartComponent]
 })
 export class QuestionnaireComponent implements OnInit {
     QForm: FormGroup;

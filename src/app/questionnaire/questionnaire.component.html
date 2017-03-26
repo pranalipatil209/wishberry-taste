@@ -4,12 +4,19 @@
         <div class="qform">
             <form #form="ngForm" novalidate>
                 <div class="questionCard" *ngFor="let q of questionData; let track = index" [ngClass]="{'has-error' : unchecked[track] == track}">
-                    <div class="form-group question"><label><h4>
-                        {{q.question}}*</h4></label></div>
+                    <div class="form-group question">
+                        <label>
+                            <h4>
+                            {{q.question}}*
+                            </h4>
+                        </label>
+                    </div>
                     <div class="form-group">
                         <span *ngFor="let i of q.options; let even = index">
-                            <input type="radio" name="{{track}}" value="{{i}}" id="{{i}}" required ngModel>
-                            &nbsp;&nbsp;&nbsp;&nbsp;{{i}}<br>
+                            <li>
+                                <input type="radio" name="{{track}}" value="{{i}}" id="{{i}}" required ngModel>
+                                &nbsp;&nbsp;{{i}}
+                            </li>
                         </span>
                     </div>
                 </div>
@@ -24,5 +31,5 @@
             </form>
         </div>
     </div>
-    <barchart [answer1]="pass"></barchart>
+    <barchart [answer]="pass"></barchart>
 </div>

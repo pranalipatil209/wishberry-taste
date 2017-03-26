@@ -6,9 +6,9 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./barchart.component.css']
 })
 export class BarchartComponent implements OnInit {
-  @Input answer1:any;
+  @Input() answer:any;
   constructor() {
-    console.log(this.answer1);
+    console.log('answer ',this.answer);
   }
 
   ngOnInit() {
