@@ -1,0 +1,61 @@
+.canvas{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+.header {
+    text-align: center;
+    color : white;
+    background-color: #7F1537;
+    padding: 1px;
+    width: 100vw;
+}
+
+.questionCard {
+    margin : 20px;
+    padding: 20px;
+    border: 1px solid darkgray;
+    border-radius: 4px;
+}
+
+.has-error {
+    animation: color-fade 2s forwards;
+    -webkit-animation: color-fade 2s forwards;
+    -moz-animation: color-fade 2s forwards;
+}
+
+@-webkit-keyframes color-fade {
+    80% {
+        background:#7F1537;
+        color : white;
+    }
+
+}
+@-moz-keyframes color-fade {
+    80% {
+        background:#7F1537;
+        color : white;
+    }
+
+}
+@keyframes color-fade {
+    80% {
+        background:#7F1537;
+        color: white;
+    }
+
+}
+
+.submit{
+    background-color: #7F1537;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.reset {
+    border: 1px solid #7F1537;
+    background-color: white;
+    color : #7F1537;
+    margin-bottom: 10px;
+
+}

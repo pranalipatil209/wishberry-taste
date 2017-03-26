@@ -1,20 +1,28 @@
-<div class="container">
-  <div class="header"><h3>Questionnaire</h3></div>
-  <div class="qform">
-    <form [formGroup]="QForm" novalidate (ngSubmit)="submitForm(QForm.value)">
-      <div class="questionCard" *ngFor="let q of questionData">
-        <div class="form-group question"><label><h4>{{q.question}}</h4></label></div>
-        <hr>
-        <div class="form-group">
-          <span *ngFor="let i of q.options">
-             <input type="radio"  name="$index" value="i">&nbsp;&nbsp;&nbsp;&nbsp;{{i}}<br>
-          </span>
+<div class="base">
+    <div class="header"><h3>Questionnaire</h3></div>
+    <div class="canvas">
+        <div class="qform">
+            <form #form="ngForm" novalidate>
+                <div class="questionCard" *ngFor="let q of questionData; let track = index" [ngClass]="{'has-error' : unchecked[track] == track}">
+                    <div class="form-group question"><label><h4>
+                        {{q.question}}*</h4></label></div>
+                    <div class="form-group">
+                        <span *ngFor="let i of q.options; let even = index">
+                            <input type="radio" name="{{track}}" value="{{i}}" id="{{i}}" required ngModel>
+                            &nbsp;&nbsp;&nbsp;&nbsp;{{i}}<br>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <button class="btn btn-block btn reset" type="reset" (click)="form.reset();formReset()">Clear</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-block submit" (click)="submitForm(form.value)">Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
-      </div>
-      <div class="form-group">
-        <button class="btn-block btn-success buttn" type="submit">Submit</button>
-      </div>
-    </form>
-  </div>
+    </div>
+    <barchart [answer1]="pass"></barchart>
 </div>
-
