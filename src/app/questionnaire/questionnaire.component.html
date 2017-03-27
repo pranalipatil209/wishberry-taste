@@ -33,7 +33,7 @@
         </div>
     </div>
 </div>
-<div [ngClass]="{'black-overlay' : pass}"></div>
-<div [ngClass]="{'chart':pass}">
-  <barchart *ngIf="pass" [src]="pass"></barchart>
+<div [ngClass]="{'black-overlay' : show}" (click)="show=false;form.reset();formReset()"></div>
+<div [ngClass]="{'flex-container':show}">
+  <barchart *ngIf="show" [src]="pass"></barchart>
 </div>

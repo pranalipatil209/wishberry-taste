@@ -18,6 +18,7 @@ export class QuestionnaireComponent implements OnInit {
         incorrect : 0
     };
     pass:any;
+    show:boolean = false;
     constructor(fb: FormBuilder) {
         this.QForm = fb.group({})
     }
@@ -50,6 +51,7 @@ export class QuestionnaireComponent implements OnInit {
                 }
             }
             this.pass = this.given;
+            this.show = true;
         }
         console.log(this.unchecked,this.given.correct,this.given.incorrect);
     }

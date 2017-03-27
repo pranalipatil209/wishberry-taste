@@ -1,0 +1,80 @@
+.myrow {
+  text-align: center;
+  width: 100vw;
+  text-align: center;
+  position: absolute;
+  top : 60%;
+  margin-top: -300px;
+  color: #7F1537;
+}
+
+.box1 {
+  margin: auto;
+  width: 300px;
+  font-size: 72px;
+  color : #7F1537;
+}
+
+#head {
+  font-size: 150px;
+  color: #7F1537;
+}
+#text {
+  font-family: MyriadPro-Light;
+}
+
+
+.box2 {
+  margin: auto;
+  margin-top: 30px;
+  width : 250px;
+}
+
+button {
+  border: 1.7px solid;
+  border-color: #7F1537;
+  height: 50px;
+  background-color: white;
+  color: #7F1537;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #7F1537;
+  color: white;
+}
+
+.gitbutton {
+  height: 145px;
+  width: 150px;
+  background-color: #7F1537;
+  border-radius: 71px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width:768px) {
+  .myrow {
+    top : 70%;
+  }
+  #head {
+    font-size: 70px;
+  }
+  .gitbutton {
+    margin: auto;
+    height: 75px;
+    width: 75px;
+  }
+}
+
+@media screen and (max-width:380px) {
+  .myrow {
+    top : 70%;
+  }
+  #head {
+    font-size: 45px;
+  }
+}
