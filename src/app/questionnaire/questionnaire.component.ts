@@ -37,6 +37,7 @@ export class QuestionnaireComponent implements OnInit {
                 this.count++;
             }
         }
+        console.log('unchecked ',this.unchecked);
         if(this.count == 10) {
             for (let key in value) {
                 if (this.questionData[key].answer == value[key]) {
@@ -48,7 +49,7 @@ export class QuestionnaireComponent implements OnInit {
                     console.log('incorrect ',value[key]);
                 }
             }
-        this.pass = this.given;
+            this.pass = this.given;
         }
         console.log(this.unchecked,this.given.correct,this.given.incorrect);
     }
@@ -58,6 +59,7 @@ export class QuestionnaireComponent implements OnInit {
         this.given.correct = 0;
         this.given.incorrect = 0;
         this.count = 0;
+        this.pass = null;
     }
 
 }

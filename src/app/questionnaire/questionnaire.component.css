@@ -1,3 +1,6 @@
+.base{
+  position: absolute;
+}
 .canvas{
     width: 80%;
     margin: auto;
@@ -65,6 +68,35 @@ li{
     font-size: 16px;
 }
 
+.black-overlay {
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  z-index: 1;
+}
+
+.noscroll {
+  position: fixed;
+}
+
+.chart {
+  margin: auto;
+  transform: translateY(50%);
+  width: 70%;
+  height: 55%;
+  z-index: 50;
+  background-color: white;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px gray;
+}
+
+barchart {
+  margin-top: 20px;
+  padding: 10px;
+}
+
 @media (max-width: 500px){
     h4{
         font-size: 16px;
@@ -74,3 +106,4 @@ li{
         font-size: 14px;
     }
 }
+

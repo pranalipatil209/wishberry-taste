@@ -1,17 +1,13 @@
-import { Component, OnInit, Input} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'barchart',
   templateUrl: './barchart.component.html',
   styleUrls: ['./barchart.component.css']
 })
-export class BarchartComponent implements OnInit {
-  @Input() answer:any;
+export class BarchartComponent {
+  @Input() src;
+
   constructor() {
-    console.log('answer ',this.answer);
   }
-
-  ngOnInit() {
-  }
-
 }

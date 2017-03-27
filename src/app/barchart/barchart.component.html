@@ -1,13 +1,13 @@
 <div>
   <div style="display: block">
     <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [legend]="barChartLegend"
-            [chartType]="barChartType">
+            [datasets]="[{data: [0,src.incorrect*10], label: 'Series B'},{data: [src.correct*10], label: 'Series A'}]"
+            [labels]="[['Correct'], 'Incorrect']"
+            [options]="{scaleShowVerticalLines: false,responsive: true}"
+            [legend]="true"
+            [chartType]="'bar'">
 
     </canvas>
   </div>
-  <button (click)="randomize()">Update</button>
 </div>
+
