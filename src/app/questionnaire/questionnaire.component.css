@@ -101,12 +101,19 @@ barchart {
 }
 
 @media (max-width: 770px){
+    .canvas {
+        width : 90%;
+    }
   .flex-container {
+      width : 75%;
     transform: translateY(60%);
   }
 }
 
 @media (max-width: 500px){
+    .canvas {
+        width : 99%;
+    }
     h4{
         font-size: 16px;
         font-weight: 400;
@@ -115,6 +122,7 @@ barchart {
         font-size: 14px;
     }
     .flex-container {
+        width : 90%;
       transform: translateY(90%);
     }
 }
