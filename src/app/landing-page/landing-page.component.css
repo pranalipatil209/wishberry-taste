@@ -81,5 +81,12 @@ img {
   }
   #head {
     font-size: 45px;
+    margin-left: 7%;
+  }
+  .col-md-5{
+    margin-left: 7%;
+  }
+  .col-md-4{
+    margin-left: 7%;
   }
 }
