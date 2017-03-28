@@ -15,10 +15,13 @@
 }
 
 .questionCard {
-    margin : 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 20px;
     border: 1px solid darkgray;
     border-radius: 4px;
+    background-color: white;
+  box-shadow: 2px 2px 4px gray;
 }
 
 .has-error {
