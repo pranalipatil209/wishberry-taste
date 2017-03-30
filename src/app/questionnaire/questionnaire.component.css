@@ -1,5 +1,6 @@
 .base{
   position: absolute;
+  width: 100vw;
 }
 .canvas{
     width: 80%;
@@ -11,7 +12,7 @@
     color : white;
     background-color: #7F1537;
     padding: 1px;
-    width: 100vw;
+    width: 100%;
 }
 
 .questionCard {
